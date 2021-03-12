@@ -1,0 +1,12 @@
+.jumbotron {
+    background: url("../../images/books-hero.jpg") #000 no-repeat center;
+    min-height: 250px;
+}
+
+.jumbotron h1, .jumbotron p {
+    color: white;
+}
+
+.jumbotron h1 {
+    font-family: 'Fredoka One', cursive;
+}
