@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Nav from "./components/Nav";
-import Jumbotron from "./components/Jumbotron";
-import SearchForm from "./components/SearchForm";
+import NavBar from "./components/NavBar";
+import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
 import NoMatch from "./pages/NoMatch";
 import Search from "./pages/Search";
@@ -16,15 +15,16 @@ class App extends Component {
         <div>
           <Nav />
           <Jumbotron />
-          <SearchForm />
           <Wrapper>
-            
+            <Route exact path="/" component={Search} />
+            <Route exact path="/search" component={Search} />
+            <Route exact path="/saved" component={Saved} />
+            <Route exact path="/noMatch" component={NoMatch} />
           </Wrapper>
         </div>
       </Router>
     );
   }
 }
-
 
 export default App;
